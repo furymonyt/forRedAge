@@ -1,0 +1,10 @@
+Ищем MatsWar.interact(player);
+
+И после return; вставляем
+
+#region DRugsDelivery
+                    case 1569:
+                    case 1570:
+                        DrugsDelivery.interactPressed(player, id);
+                        return;
+                    #endregion

@@ -1,0 +1,1 @@
+Просто закидываем файл creditSystem.cs в папку MoneySystem

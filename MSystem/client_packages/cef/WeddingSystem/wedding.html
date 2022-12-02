@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/wedding.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>weddings</title>
+</head>
+<body>
+    <div id="Wedding" v-if="active">
+        <main>
+            <div class="container">
+                <h2>Добрый день, какой вид наших услуг вас интрересует?</h2>
+
+                <div class="btns">
+                    <div @click="WeddingInputBTN" class="BTNWedding">Заключить Брак [50000$]</div>
+                    <div @click="divorce" class="divorce">Развестись</div>
+                    <div @click="closeMenu" class="exit">Выйти</div>
+
+                    <div @click="openAppMenu" v-if="application" class="application">Заявление</div>
+                </div>
+            </div>
+        </main>
+        <div v-if="applicationMenu" class="applicationMenu">
+            <h3>Вам пришло заявление о браке от "{{applName}}_{{applSurname}}"</h3>
+            <div class="appBTNs">
+                <div @click="Yes" class="yesBTN">Да</div>
+                <div @click="No" class="noBTN">Нет</div>
+            </div>
+        </div>
+        <div class="WeddingInput" v-if="WeddingInputMenu">
+            <p>Имя человека</p>
+            <input type="text" v-model="name" placeholder="Имя (английские символы)">
+            <div class="weddBTN">
+                <div @click="WeddingName" class="continueBTN">Продолжить</div>
+                <div @click="WeddingInputMenuClose" class="exitBTN">Отмена</div>
+            </div>
+        </div>
+        <div class="WeddingInput2" v-if="WeddingInputMenu2">
+            <p>Фамилия человека</p>
+            <input type="text" v-model="surname" placeholder="Фамилия (английские символы)" >
+            <div class="weddBTN2">
+                <div @click="WeddingSurname" class="continueBTN2">Продолжить</div>
+                <div @click="WeddingInputMenuClose" class="exitBTN">Отмена</div>
+            </div>
+        </div>
+    </div>
+<script src="js/wedding.js"></script>
+</body>
+</html>

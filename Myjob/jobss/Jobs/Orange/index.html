@@ -1,0 +1,174 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jobs - Orange</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        body {
+            background: radial-gradient(50% 50% at 50% 50%, rgba(22, 21, 35, 0) 0%, rgba(22, 21, 35, .80) 100%);
+            background-color: rgba(22, 21, 35, .80);
+            display: none;
+			overflow:  hidden;
+			-webkit-animation: fadeInFromNone 1s ease-out;
+			-moz-animation: fadeInFromNone 1s ease-out;
+			-o-animation: fadeInFromNone 1s ease-out;
+			animation: fadeInFromNone 1s ease-out;
+        }
+
+        .orange {
+            background: url(./img/orange.png);
+            background-size: 100% 100%;
+            width: 150px;
+            height: 150px;
+        }
+
+        #spawnZone {
+            margin-right: 0;
+            background: url(./img/wood.png) no-repeat ;
+            background-size: 1024px, 687px;
+            height: 100%;
+        }
+        .dropme {
+            position: absolute;
+            right: 5%;
+            bottom: 2%;
+            color: #ffffff;
+            text-align: center;
+        }
+        #zone {
+            background: url("./img/basket.png");
+            background-size: 100% 100%;
+            width: 684px;
+            height: 638px;
+			margin-bottom: -30px;
+			position: absolute;
+			right: 100px;
+        }
+		.mouse {
+            background: url("./img/mouse.png");
+            background-size: 100% 100%;
+            width: 276px;
+            height: 138px;
+			bottom: 10px;
+			position: absolute;
+			left: 50px;
+        }
+		.alltxt {
+			position: absolute;
+			right: 380px;
+			top: 50px;
+		}
+		.alltxt .text {
+			font-family: Montserrat;
+			font-weight: 700;
+			font-size: 45px;
+			position: absolute;
+			color: #ffffff;
+			left: 50px;
+		}
+		.alltxt .text2 {
+			font-family: Montserrat;
+			font-weight: 200;
+			font-size: 45px;
+			position: absolute;
+			color: #ffffff;
+			margin-top: 45px;
+		}
+		.alltxt .text3 {
+			font-family: Montserrat;
+			font-weight: 400;
+			font-size: 20px;
+			position: absolute;
+			color: #ffffff50;
+			margin-top: 115px;
+			width: 300px;
+			text-align: right;
+			left: 10px;
+		}
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+    </style>
+</head>
+<body style="margin: 0;">
+    <div class="mouse"></div>
+		<div class="alltxt">
+			<div class="text">СОБЕРИТЕ</div>
+			<div class="text2">АПЕЛЬСИНЫ</div>
+			<div class="text3">Соберите апельсины в корзину</div>
+		</div>
+    <div class="mouse"></div>
+	<div class="dropme" id="zone">
+        <div style="margin-top: 65px; font-family: Montserrat; font-weight: 400; opacity: 0;">Собрано <span id="count"></span> из <span id="maxCount"></span></div>
+    </div>
+    <div id="spawnZone"></div>
+    <script src="./js/script.js"></script>
+</body>
+</html>

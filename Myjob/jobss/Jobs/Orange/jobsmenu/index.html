@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<title>Job Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="fonts/font/stylesheet.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/index.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700" rel="stylesheet">
+	<script src="./js/library/vue.js"></script>
+</head>
+
+<body>
+	<div class="job" v-if="active">
+		<img src="./img/palma.png" class="palma">
+		<img src="./img/obl.png" class="obl">
+		<img src="./img/obl.png" class="otr">
+		<img src="./img/obr.png" class="obr">
+		<div class="allblocks">
+			<div class="nameb">
+				<div class="work">РАБОТА</div>
+				<div class="wsub">СБОРЩИК АПЕЛЬСИНОВ</div>
+				<div class="wdesc">Ходите по апельсиновому полю и собирайте апельсины выполняй задания, которые появятся у тебя на экране</div>
+				<div v-if="workid != 10" @click="btnchangeworkstate(18)" style="opacity: 0.5;" class="wstart">УСТРОИТЬСЯ</div>
+				<div v-if="workid == 10" @click="btnchangeworkstate(-1)" class="wstart">УВОЛИТЬСЯ</div>
+			</div>
+			<div class="jobs">
+				<div class="block">
+					<div class="name">Маленькое поле</div>
+					<div class="desc">Поле находиться недалеко отсюда, там не очень много деревьев, но для новичка пойдет. Там ты можешь набить опыта и у тебя откроется большое поле</div>
+					<div class="treb1">Требуеться 1 уровень</div>
+					<div class="treb1">Зарплата {{jobpayment}}$</div>
+					<div v-if="lvl > 0">
+						<div @click="btnselectjob(0)" v-if="workstate2 == 'true'" class="start2">Закончить работу</div>
+						<div @click="btnselectjob(0)" v-else class="start">Начать работу</div>
+					</div>
+				</div>
+				<div class="block">
+					<div class="name">Большое поле</div>
+					<div class="desc">Поле находиться недалеко отсюда, там не очень много деревьев, но для новичка пойдет. Там ты можешь набить опыта и у тебя откроется большое поле</div>
+					<div class="treb1">Требуеться 3 уровень</div>
+					<div class="treb1">Зарплата {{jobpayment2}}$</div>
+					<div v-if="lvl > 3">
+						<div @click="btnselectjob(1)" v-if="workstate3 == 'true'" class="start2">Закончить работу</div>
+						<div @click="btnselectjob(1)" v-else class="start">Начать работу</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <script src="./js/index.js"></script>
+	<script src="./js/library/jquery-3.2.1.min.js"></script>
+</body>
+</html>

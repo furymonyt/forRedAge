@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/check.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="js/btns.js"></script>
+    <title>credit</title>
+</head>
+<body>
+    <div class="main" id="boom" v-if="active">
+        <div class="container">
+            <div class="header">
+                <h1>Кредитное отделение</h1>
+                <div class="owner">Приветствуем!<br><b>{{playerName}}</b></div>
+                <div @click="exit" class="exit_btn">
+                    <p>Выйти</p>
+                </div>
+            </div>
+            <div class="nav">
+                <div class="nav_content" v-on:click="seencontent1">
+                    <p>Пройти тест</p>
+                </div>
+            </div>
+            <div class="content">
+                <div v-if="seen_content1">
+                    <h2>Ответьте на вопросы, чтобы оформить кредит</h2>
+                    <p><b>Вопрос №1:</b> Для чего вы хотите взять кредит?</p>
+                    <div class="flex">
+                        <input type="text" placeholder="Я хотел бы приобрести..." id="check1">
+                        <div id="check_mark1"></div>
+                    </div>
+                    <p><b>Вопрос №2:</b> Опишите ваш источник заработка.</p>
+                    <div class="flex">
+                        <input type="text"placeholder="Я богатый мафиозник..." id="check2">
+                        <div id="check_mark2"></div>
+                    </div>
+                    <p><b>Вопрос №3:</b> Готовы ли вы потерять своё имущество, при неуплате кредита?</p>
+                      <div class="flex">
+                        <div id="Y" onclick="type = 1"><b>да</b></div>
+                        <div id="N" onclick="type = 0"><b>нет</b></div>
+                        <div id="check_mark3"></div>
+                      </div>
+                    <button @click="property" class="btn" onclick="galocka()">Далее</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>Vue.filter('formatThousands', (x) => {return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");})</script> 
+<script>Vue.filter('formatThousands1', (x) => {return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");})</script> 
+<script src="js/checkSystem.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+ 
+</html>

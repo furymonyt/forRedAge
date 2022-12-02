@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>MushFarm</title>
+  <link rel="stylesheet" href="css/farmer.css">
+  <link rel="stylesheet" href="../../../assets/fonts/bebas-neue/stylesheet.css">	
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+</head>
+
+<body>
+  <div id="app" v-cloak>
+    <transition name="modal">
+      <div v-if="active" class="dialog">
+			<div class="name">
+			Грибник
+			</div>
+			<div class="line"></div>
+			<div class="textblock">
+				<div class="text">
+				Привет, я грибник, хочешь заработать? Купи нож в магазине 24/7 и иди в специальное место для сбора грибов, когда соберешь отвези их на рынок и продай, все деньги твои
+				</div>
+			</div>
+			<div class="btns">
+				<div v-if="!onWork" @click="workState()" class="btnyes">НАЧАТЬ РАБОТУ</div>
+				<div @click="workState()" v-else class="btnyes">ЗАКОНЧИТЬ РАБОТУ</div>
+				<div @click="closeMenu()" onClick="exit()" class="btnno">НЕТ, СПАСИБО</div>
+			</div>
+		</div>
+    </transition>
+
+    <transition name="fade">
+      <div class="fade" v-if="active"></div>
+    </transition>
+  </div>
+  <script src="js/farmer.js"></script>
+</body>
+
+</html>

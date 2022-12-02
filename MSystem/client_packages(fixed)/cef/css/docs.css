@@ -1,0 +1,11 @@
+Ищем
+.passport #gender{
+    margin-left: 195px;
+    margin-bottom: 14px;
+}
+
+После этого кода вставляем
+.passport #wedding{
+    margin-left: 420px;
+    margin-bottom: 14px;
+}

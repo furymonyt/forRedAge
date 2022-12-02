@@ -1,0 +1,227 @@
+*{margin: 0; padding: 0;}
+p{padding: 0;margin: 0;}
+h1,h2,h3,h4{margin: 0;padding: 0;}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+main{
+    width: 100%;
+    height: 40vh;
+    position: absolute;
+    bottom: 0;
+    color: rgb(255, 255, 255);
+    padding-top: 90px;
+    background-color: rgba(207, 207, 207, 0.8);
+}
+.container{
+    width: 45%;
+    display: block;
+    margin: 0 auto;
+}
+.main h2{
+    padding-top: 5px;
+}
+.btns{
+    margin-top: 30px;
+    display: flex;
+}
+.BTNWedding{
+    width: 250px;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    font-size: 19px;
+    cursor: pointer;
+    margin-right: 15px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.BTNWedding:hover{
+    background: linear-gradient(90deg, rgb(186, 255, 76), green);
+    color: rgb(255, 255, 255);
+    transition-duration: 0.7s;
+}
+.divorce{
+    width: 200px;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    font-size: 19px;
+    cursor: pointer;
+    margin-right: 20px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.divorce:hover{
+    background: linear-gradient(90deg, rgb(255, 76, 76), rgb(128, 0, 0));
+    color: rgb(255, 255, 255);
+    transition-duration: 0.7s;
+}
+.exit{
+    width: 150px;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    font-size: 19px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.exit:hover{
+    background: linear-gradient(90deg, rgb(220, 11, 248), rgb(1, 238, 255));
+    color: rgb(255, 255, 255);
+    transition-duration: 0.7s;
+}
+.application{
+    width: 150px;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    border: 5px solid red;
+    border-radius: 3px;
+    font-size: 19px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 3px;
+    margin-left: 40px
+}
+.application:hover{
+    background: linear-gradient(90deg, rgb(20, 47, 201), rgb(3, 238, 255));
+    color: rgb(255, 255, 255);
+}
+.WeddingInput{
+    position: absolute;
+    width: 400px;
+    height: 280px;
+    top: 200px;
+    left: 38%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    color: white;
+}
+.applicationMenu{
+    position: absolute;
+    width: 400px;
+    height: 280px;
+    top: 200px;
+    left: 38%;
+    background-color: rgb(92, 92, 92);
+    border-radius: 10px;
+    color: white;   
+}
+.applicationMenu h3{
+    text-align: center;
+}
+.appBTNs{
+    display: flex;
+    justify-content: space-between;
+}
+.yesBTN{
+    width: 100px;
+    text-align: center;
+    padding: 15px;
+    margin-top: 120px;
+    margin-left: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: green;
+    font-size: 19px;
+}
+.noBTN{
+    width: 100px;
+    text-align: center;
+    padding: 15px;
+    margin-top: 120px;
+    margin-right: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 19px;
+    background-color: red;
+}
+.WeddingInput p{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.WeddingInput input[type='text']{
+    width: 300px;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    background-color: rgb(50, 50, 51);
+    border: none;
+    color: white;
+    font-size: 19px;
+    outline: none;
+}
+.WeddingInput2{
+    position: absolute;
+    width: 400px;
+    height: 280px;
+    top: 200px;
+    left: 38%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    color: white;
+
+}
+.WeddingInput2 p{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.WeddingInput2 input[type='text']{
+    width: 300px;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    background-color: rgb(50, 50, 51);
+    border: none;
+    color: white;
+    font-size: 19px;
+    outline: none;
+}
+.weddBTN{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.weddBTN2{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.continueBTN{
+    width: 120px;
+    padding: 10px;
+    text-align: center;
+    background: linear-gradient(45deg, rgb(186, 255, 76), green);
+    border-radius: 4px;
+    margin-left: 55px;
+    cursor: pointer;
+}
+.continueBTN2{
+    width: 120px;
+    padding: 10px;
+    text-align: center;
+    background: linear-gradient(45deg, rgb(186, 255, 76), green);
+    border-radius: 4px;
+    margin-left: 55px;
+    cursor: pointer;
+}
+.exitBTN{
+    width: 120px;
+    padding: 10px;
+    text-align: center;
+    background: linear-gradient(45deg, rgb(47, 0, 255), rgb(72, 0, 155));
+    border-radius: 4px;
+    margin-right: 55px;
+    cursor: pointer;
+}

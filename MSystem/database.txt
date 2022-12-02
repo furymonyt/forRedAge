@@ -1,0 +1,11 @@
+В базе всё нужно сделать как на фото. 
+
+В mName default null
+
+В mSurname default null
+
+В applName default null
+
+В applSurname default null
+
+В weddingappl default 0

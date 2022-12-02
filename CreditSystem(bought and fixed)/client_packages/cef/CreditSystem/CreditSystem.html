@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bank.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>bank</title>
+</head>
+<body>
+    <div class="main" id="boom" v-if="active">
+        <div class="container">
+            <div class="header">
+                <h1>Кредитное отделение</h1>
+                <div class="owner">Приветствуем!<br><b>{{playerName}}</b></div>
+                <div class="bank_money">
+                    <div class="money">
+                        <p>Наличные:<br><b>{{playerMoney | formatThousands1}}$</b></p>
+                    </div>
+                    <div class="debt">Долги:<br><b>{{debt}}$</b></div>
+                </div>
+                <div @click="exit" class="exit_btn">
+                    <p>Выйти</p>
+                </div>
+            </div>
+            <div class="nav">
+                <div class="nav_content">
+                    <p v-on:click="seenContent1">Оформить кредит</p>
+                </div>
+                <div class="nav_content">
+                    <p v-on:click="seenContent2">Погасить кредит</p>
+                </div>
+                <div class="nav_content">
+                    <p v-on:click="seenContent3">Условия</p>
+                </div>
+                <div @click="exit" class="exit_btn2">
+                    <p>Выйти</div>
+            </div>
+            <div class="content">
+                <div v-if="seen_content1">
+                    <h2>Оформить Кредит</h2>
+                    <input type="number" id="information" v-model="creditSum" placeholder=" Сумма">
+                    <div id="procent_system" onclick="sumProcent()">
+                        <p>Показать процент</p>
+                    </div>
+                    <div @click="giveCredit" id="next" class="btn">
+                        <p id="next">Далее</p>
+                    </div>
+                </div>
+                <div v-if="seen_content2" class="content2">
+                    <h2>Погашение кредита<h2>
+                        <input class="input2" placeholder=" Сумма" type="number" v-model="creditSum">
+                        <div @click="payCredit()" id="next" class="btn">
+                            <p id="next">Далее</p>
+                        </div>
+                </div>
+                <div class="conditions_Credit" v-if="seen_content3">
+                    <h2>Перед оформлением кредита внимательно прочитайте условия!</h2>
+                    <ul>
+                        <li>Для того, чтобы взять кредит, кредитное отделение должно убедиться, что вы вернетё долг. Поэтому нужно пройти проверку рядом с отделением.</li>
+                        <li>Кредит даётся на 14 дней, с момента взятия. </li>
+                        <li>Если вы не возвращаете деньги, отделение забирает у вас имущество или деньги.</li>
+                        <li>Если у вас есть кредит, вы не можете продавать имущество.</li>
+                        <li>Минимальная сумма кредита 10.000$. Максимальная сумма кредита 700.000$.</li>
+                        <li>Вы должны прожить в штате более 4 лет(4 lvl).</li> 
+                    </ul>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>Vue.filter('formatThousands', (x) => {return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");})</script> 
+<script>Vue.filter('formatThousands1', (x) => {return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");})</script> 
+<script src="js/creditSystem.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src="js/calculator.js"></script>
+</html>
