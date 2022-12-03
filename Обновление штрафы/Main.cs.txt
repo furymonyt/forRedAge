@@ -1,0 +1,27 @@
+Обращаться в лс CoolFire#3802
+
+case "BUY_CAR":
+                            {
+                                Houses.House house = Houses.HouseManager.GetHouse(player, true);
+                                if (Players[player].Fines != 0)
+                                {
+                                    Notify.Error(player, "Вы не можете купить транспорт, у вас есть неоплаченные штрафы.", 2500);
+                                    return;
+                                }
+
+
+case "DEATH_CONFIRM":
+
+под ним вставляем case "FINE_PAYMENT":
+                            {
+                                if(!MoneySystem.Wallet.Change(player, -Players[player].Fines))
+                                {
+                                    Notify.Error(player, "У вас недостаточно средств, чтобы оплатить штрафы");
+                                    return;
+                                }
+                                Notify.Succ(player, $"Вы оплатили штрафы суммой на {Players[player].Fines}$.", 2500);
+                                //добавляет определенный процент в казну мерии
+                                Fractions.Stocks.fracStocks[6].Money += Convert.ToInt32(Players[player].Fines * 0.9);
+                                //очищает штрафы
+                                Players[player].Fines = 0;
+                                return;
